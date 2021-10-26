@@ -83,7 +83,7 @@ useEffect(() => {
       <h1 id="title">Cupcakes</h1>
       <h2>🧁 {totalMinted}/{maxSupply} Minted</h2>
       <form>
-        <h2>How many would you like to mint? Limit of 5.</h2>
+        <h2>How many would you like to mint? Limit of {maxMint}.</h2>
         <input
           type="number"
           placeholder="0"
