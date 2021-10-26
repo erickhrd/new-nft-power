@@ -80,13 +80,10 @@ useEffect(() => {
       </button>
 
       <br></br>
-      <h1 id="title">Cupcakes Minter</h1>
-      <h2>🖼 {totalMinted}/{maxSupply}</h2>
-      <p>
-        Simply add the number of NFTs you want to mint, then press "Mint Now"
-      </p>
+      <h1 id="title">Cupcakes</h1>
+      <h2>🧁 {totalMinted}/{maxSupply} Minted</h2>
       <form>
-        <h2>✍️ Quantity (Max is {maxMint}): </h2>
+        <h2>How many would you like to mint? Limit of 5.</h2>
         <input
           type="number"
           placeholder="0"
