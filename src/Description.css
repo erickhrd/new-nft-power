@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.description {
+    margin-top: 30px;
+    height: fit-content;
+    width: fit-content;
+    background-color: #000066;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.display__inside{
+    display: flex;
+}
+
+.display__inside > div {
+    margin:auto;
+}
+
+.display__inside > div > img{
+    width: 30vw;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .display__inside{
+        display: block;
+    }
+    
+    .display__inside > div {
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    .display__inside > div > img{
+        width: 100%;
+    }
+  }

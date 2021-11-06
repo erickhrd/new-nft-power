@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { connectWallet, getCurrentWalletConnected, mintPower, contract} from "./utils/interact.js";
-
+import './Minter.css'
 const Minter = (props) => {
 
   //State variables
@@ -84,22 +84,29 @@ useEffect(() => {
       </button>
 
       <br></br>
-      <h1 id="title">NFT Power Minter</h1>
-      <h2>🖼 {totalMinted}/{maxSupply}</h2>
-      <p>
-        Simply add the number of NFTs you want to mint, then press "Mint."
-      </p>
-      <form>
-        <h2>✍️ NFT Quantity({maxMint}-MAX): </h2>
-        <input
-          type="number"
-          placeholder="0"
-          onChange={(event) => setNftQuantity(event.target.value)}
-        />
-      </form> 
-      <button id="mintButton" onClick={onMintPressed}>
-        Mint NFT
-      </button>
+      <h1 id="title">Mint a CupCake</h1>
+      <div className="display__inside">
+        <div>
+          <img className="cupcake__image" src="/cupcake.jpg"/>
+        </div>
+        <div>
+            <h2>🧁 {totalMinted}/{maxSupply}</h2>
+            <p>
+              Simply add the number of CupCakes you want to mint, then press "Mint."
+            </p>
+            <form>
+              <h2>({maxMint}-MAX): </h2>
+              <input
+                type="number"
+                placeholder="0"
+                onChange={(event) => setNftQuantity(event.target.value)}
+              />
+            </form> 
+            <button id="mintButton" onClick={onMintPressed}>
+              Mint NFT
+            </button>
+          </div>
+        </div>
       <p id="status">
         {status}
       </p>
