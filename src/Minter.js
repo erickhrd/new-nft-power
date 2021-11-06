@@ -39,9 +39,9 @@ useEffect(() => {
   async function fetchData() {
     const {address, status} = await getCurrentWalletConnected();
     setWallet(address)
-    setStatus(status); 
+    setStatus(status);
 
-    addWalletListener(); 
+    addWalletListener();
 
     const maxMint = await contract.methods.MAX_PUBLIC_MINT().call();
       setMaxMint(maxMint);
@@ -62,10 +62,6 @@ useEffect(() => {
   const onMintPressed = async () => {
     const { status } = await mintPower(nftQuantity);
     setStatus(status);
-
-
-    
-  
 };
 
 
@@ -84,6 +80,7 @@ useEffect(() => {
       </button>
 
       <br></br>
+<<<<<<< HEAD
       <h1 id="title">Mint a CupCake</h1>
       <div className="display__inside">
         <div>
@@ -107,6 +104,21 @@ useEffect(() => {
             </button>
           </div>
         </div>
+=======
+      <h1 id="title">Cupcakes</h1>
+      <h2>🧁 {totalMinted}/{maxSupply} Minted</h2>
+      <form>
+        <h2>How many would you like to mint? Limit of {maxMint}.</h2>
+        <input
+          type="number"
+          placeholder="0"
+          onChange={(event) => setNftQuantity(event.target.value)}
+        />
+      </form>
+      <button id="mintButton" onClick={onMintPressed}>
+        Mint NFT
+      </button>
+>>>>>>> 4e20d14dccae47a419e1b184bd41843b26ed0fb4
       <p id="status">
         {status}
       </p>
